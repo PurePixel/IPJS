@@ -13,4 +13,4 @@ personalMovieDB.movies[lastFilm] = prompt('На сколько оцените е
 lastFilm2 = prompt('Один из последнних просмотренных фильмов', 'Konan');
 personalMovieDB.movies[lastFilm2] = prompt('На сколько оцените его?', '9.1');
 
-console.log(personalMovieDB.movies);
+console.log(personalMovieDB);
