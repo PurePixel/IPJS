@@ -8,7 +8,5 @@ const personalMovieDB = {
 };
 
 let lastFilm = personalMovieDB.movies;
-lastFilm = prompt('Один из последнних просмотренных фильмов', 'Logan');
-personalMovieDB.movies.lastFilm = prompt('На сколько оцените его?', '8.1');
-
-console.log(personalMovieDB.movies);
+lastFilm = prompt('Один из последнних просмотренных фильмов', '');
+personalMovieDB.movies.lastFilm = prompt('На сколько оцените его?', '');
