@@ -8,6 +8,8 @@ const personalMovieDB = {
     privat: false
 };
 
+
+
 // let lastFilm, lastFilm2 = personalMovieDB.movies;
 // lastFilm = prompt('Один из последнних просмотренных фильмов', 'Logan');
 // personalMovieDB.movies[lastFilm] = prompt('На сколько оцените его?', '8.1');
@@ -22,7 +24,9 @@ const personalMovieDB = {
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
 
-if(personalMovieDB.count < 10) {
+
+
+if (personalMovieDB.count < 10) {
     console.log("Просмотрено довольно мало фильмов");
 } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     console.log('Вы классический зритель');
@@ -32,18 +36,52 @@ if(personalMovieDB.count < 10) {
     console.log('Произошла ошибка');
 }
 
-for (let i = 0; i < 2; i++) {
+
+
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последнних просмотренных фильмов', ''),
+//           b = prompt('На сколько оцените его?', '');
+
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//             personalMovieDB.movies[a] = b;
+//     } else {
+//               console.log('error');
+//               i--;
+//     }
+// }
+
+
+
+// let i = 0;
+// while (i < 2) {
+//     const a = prompt('Один из последнних просмотренных фильмов', ''),
+//         b = prompt('На сколько оцените его?', '');
+
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('good');
+//         i++;
+//     } else {
+//         console.log('error');
+//         console.log(personalMovieDB);
+//         i--;
+//     }
+// }
+
+let i = 0;
+do {
     const a = prompt('Один из последнних просмотренных фильмов', ''),
-          b = prompt('На сколько оцените его?', '');
+        b = prompt('На сколько оцените его?', '');
 
     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
+        personalMovieDB.movies[a] = b;
+        console.log('good');
+        i++;
     } else {
-              console.log('error');
-              i--;
+        console.log('error');
+        console.log(personalMovieDB);
+        i--;
     }
-}
-
-
+} while (i < 2);
 
 console.log(personalMovieDB);
