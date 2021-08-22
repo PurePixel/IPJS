@@ -9,6 +9,7 @@ function start() {
     }
 }
 
+start();
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -30,6 +31,8 @@ function personalLevel() {
     }
 }
 
+personalLevel();
+
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
         const a = prompt('Один из последнних просмотренных фильмов', ''),
@@ -38,11 +41,13 @@ function rememberMyFilms() {
         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
             personalMovieDB.movies[a] = b;
         } else {
-            console.log('error');
+            alert('Не правильно');
             i--;
         }
     }
 }
+
+rememberMyFilms();
 
 // let lastFilm, lastFilm2 = personalMovieDB.movies;
 // lastFilm = prompt('Один из последнних просмотренных фильмов', 'Logan');
@@ -92,20 +97,26 @@ function rememberMyFilms() {
 
 function writeYourGenres() {
 
-    for (let i = 0, genreIndex = 0; i < 3; i++, genreIndex++) {
-        let genreFav = prompt(`Ваш любимый жанр номер ${genreIndex + 1}`, '');
+    for (let i = 0; i < 3; i++) {
 
-        if (genreFav != '') {
-            personalMovieDB.genres[genreIndex] = genreFav;
+        if (personalMovieDB.genres[i] != '') {
+            personalMovieDB.genres[i] = prompt(`Ваш любимый жанр номер ${i + 1}`, '');
         } else {
             alert('Введите название жанра');
             i--;
-            genreIndex--;
         }
-
     }
-
 }
+
+writeYourGenres();
+
+// function showMyDB(hidden) {
+//     if(!hidden) {
+//         console.log(personalMovieDB);
+//     }
+// }
+
+// showMyDB(personalMovieDB);
 
 function showMyDB() {
     if (personalMovieDB.private === false) {
@@ -113,12 +124,4 @@ function showMyDB() {
     }
 }
 
-function data() {
-    start();
-    personalLevel();
-    rememberMyFilms();
-    writeYourGenres();
-    showMyDB();
-}
-
-data();
+showMyDB();
