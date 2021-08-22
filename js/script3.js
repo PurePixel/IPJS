@@ -1,4 +1,4 @@
- const logg = "Of all the things I lost I miss my mind the most";
+ const logg = "Преследование и убийство Жан-Поля Марата, представленное актерской труппой госпиталя в Шарантоне под руководством маркиза де Сада";
 
  console.log(logg.slice(3, 5));
  console.log(logg.substring(3, 5));
