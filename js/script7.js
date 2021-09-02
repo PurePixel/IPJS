@@ -62,7 +62,7 @@ const array = ['a','b'];
 
 const newArraay = [...array];
 
-const e6 = {
+const es9 = {
     one:1,
     two: {
         ash: 'gray',
@@ -70,5 +70,5 @@ const e6 = {
     }
 };
 
-const newObj = {...e6};
+const newObj = {...es9};
 console.log(newObj);
