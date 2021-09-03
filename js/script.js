@@ -45,15 +45,23 @@ const personalMovieDB = {
     },
     writeYourGenres: function () {
 
-        for (let i = 0; i < 3; i++) {
-            let genre = prompt(`Ваш любимый жанр номер ${i + 1}`);
+        for (let i = 0; i < 1; i++) {
+            // let genre = prompt(`Ваш любимый жанр под номером ${i + 1}`);
 
-            if (genre === '' || genre == null) {
-                console.log('Введите корректные данные');
-                i--;
-            } else {
-                personalMovieDB.genres[i] = genre;
-            }
+            // if (genre === '' || genre == null) {
+            //     console.log('Введите корректные данные');
+            //     i--;
+            // } else {
+            //     personalMovieDB.genres[i] = genre;
+            // }
+            let genres = prompt(`введите ваши любимые жанры через запятую`).toLowerCase();
+            if (genres === '' || genres == null) {
+                    console.log('Введите корректные данные');
+                    i--;
+                } else {
+                    personalMovieDB.genres = genres.split(', ');
+                    personalMovieDB.genres.sort();
+                }
         }
         personalMovieDB.genres.forEach((item, i) => {
             console.log(`Любимый жанр ${i + 1} - это ${item}`);
